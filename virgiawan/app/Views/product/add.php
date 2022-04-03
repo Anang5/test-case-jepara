@@ -20,11 +20,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="product-name" class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="product-name" placeholder="e.g. Nasi Goreng">
+                            <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" name="name" id="product-name" placeholder="e.g. Nasi Goreng" value="<?= old('name'); ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('name'); ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="thumbnail" class="form-label">Thumbnail</label>
-                            <input type="text" class="form-control" name="thumbnail" id="thumbnail" placeholder="e.g. https://example.com/thumbnail.jpg">
+                            <input type="text" class="form-control" name="thumbnail" id="thumbnail" placeholder="e.g. https://example.com/thumbnail.jpg" value="<?= old('thumbnail'); ?>">
                         </div>
                         <div class="mb-3">
                             <label for="product-price" class="form-label">Price</label>
@@ -32,7 +35,10 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Rp</span>
                                 </div>
-                                <input type="number" class="form-control" name="price" id="product-price" placeholder="e.g. 10000">
+                                <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" name="price" id="product-price" placeholder="e.g. 10000" value="<?= old('price'); ?>">
+                                <div class="invalid-feedback">
+                                    <?= $validation->getError('price'); ?>
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">

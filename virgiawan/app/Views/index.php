@@ -8,7 +8,7 @@
             <h2>Category</h2>
         </div>
         <?php foreach ($category as $c) { ?>
-            <div class="col-4 col-lg-2 mb-4 mb-lg-3">
+            <div class="col-5 col-lg-3 mb-4 mb-lg-3">
                 <a href="/category/<?= $c->id; ?>" class="card border-0 shadow btn-warning text-center text-decoration-none">
                     <div class="card-body my-3">
                         <h6 class="card-title"><?= $c->name; ?></h6>

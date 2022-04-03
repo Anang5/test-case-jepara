@@ -10,6 +10,7 @@
             <div class="card">
                 <div class="card-body">
                     <form action="/product/update/<?= $product->id; ?>" method="post">
+                        <input type="hidden" name="id" value="<?= $product->id; ?>">
                         <div class="mb-3">
                             <label for="category" class="form-label">Category</label>
                             <select class="form-select" name="id_category" id="category">
@@ -20,7 +21,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="product-name" class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="product-name" placeholder="e.g. Nasi Goreng" value="<?= $product->name; ?>">
+                            <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" name="name" id="product-name" placeholder="e.g. Nasi Goreng" value="<?= (old('name')) ? old('name') : $product->name; ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('name'); ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="thumbnail" class="form-label">Thumbnail</label>
@@ -32,7 +36,10 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Rp</span>
                                 </div>
-                                <input type="number" class="form-control" name="price" id="product-price" placeholder="e.g. 10000" value="<?= $product->price; ?>">
+                                <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" name="price" id="product-price" placeholder="e.g. 10000" value="<?= (old('price')) ? old('price') : $product->price; ?>">
+                                <div class="invalid-feedback">
+                                    <?= $validation->getError('price'); ?>
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">

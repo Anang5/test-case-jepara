@@ -12,7 +12,10 @@
                     <form action="/category/update/<?= $category->id; ?>" method="post">
                         <div class="mb-3">
                             <label for="category-name" class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="category-name" placeholder="e.g. Makanan" value="<?= $category->name; ?>">
+                            <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" name="name" id="category-name" placeholder="e.g. Makanan" value="<?= (old('name')) ? old('name') : $category->name; ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('name'); ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <!-- update and cancel button -->

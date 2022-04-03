@@ -39,13 +39,21 @@ class Category extends BaseController
         $data = [
             'appName' => $this->appName,
             'title' => 'Add Category',
-            'hero' => 0
+            'hero' => 0,
+            'validation' => \Config\Services::validation()
         ];
         return view('category/add', $data);
     }
 
     public function save()
     {
+        // validasi input
+        if (!$this->validate([
+            'name' => 'required|is_unique[category.name]'
+        ])) {
+            return redirect()->to('/category/add')->withInput();
+        }
+
         $object = [
             'name' => $this->request->getPost('name')
         ];
@@ -60,13 +68,21 @@ class Category extends BaseController
             'appName' => $this->appName,
             'title' => 'Edit Category',
             'hero' => 0,
-            'category' => $this->M_category->get_category($id)
+            'category' => $this->M_category->get_category($id),
+            'validation' => \Config\Services::validation()
         ];
         return view('category/edit', $data);
     }
 
     public function update($id)
     {
+        // validasi input
+        if (!$this->validate([
+            'name' => 'required|is_unique[category.name]'
+        ])) {
+            return redirect()->to('/category/add')->withInput();
+        }
+
         $object = [
             'name' => $this->request->getPost('name')
         ];

@@ -40,18 +40,33 @@ class Product extends BaseController
             'appName' => $this->appName,
             'title' => 'Add Product',
             'hero' => 0,
-            'category' => $this->M_category->get_category()
+            'category' => $this->M_category->get_category(),
+            'validation' => \Config\Services::validation()
         ];
         return view('product/add', $data);
     }
 
     public function save()
     {
+        // validasi input
+        if (!$this->validate([
+            'name' => 'required|is_unique[product.name]',
+            'price' => 'required|numeric',
+        ])) {
+            return redirect()->to('/product/add')->withInput();
+        }
+
+        // if thumbnail is empty, set default image
+        $thumbnail = $this->request->getPost('thumbnail');
+        if (!$thumbnail) {
+            $thumbnail = 'https://www.seekpng.com/png/detail/9-94654_big-image-food-and-drink-icon-png.png';
+        }
+
         $object = [
             'name' => $this->request->getPost('name'),
             'price' => $this->request->getPost('price'),
             'id_category' => $this->request->getPost('id_category'),
-            'thumbnail' => $this->request->getPost('thumbnail'),
+            'thumbnail' => $thumbnail,
         ];
         // dd($object);
         $this->M_product->save($object);
@@ -66,13 +81,36 @@ class Product extends BaseController
             'title' => 'Edit Product',
             'hero' => 0,
             'category' => $this->M_category->get_category(),
-            'product' => $this->M_product->get_product($id)
+            'product' => $this->M_product->get_product($id),
+            'validation' => \Config\Services::validation()
         ];
         return view('product/edit', $data);
     }
 
     public function update($id)
     {
+        // cek name
+        $old_name = $this->M_product->get_product($this->request->getPost('id'));
+        if ($old_name->name == $this->request->getPost('name')) {
+            $rule_name = 'required';
+        } else {
+            $rule_name = 'required|is_unique[product.name]';
+        }
+
+        // validasi input
+        if (!$this->validate([
+            'name' => $rule_name,
+            'price' => 'required|numeric',
+        ])) {
+            return redirect()->to('/product/add')->withInput();
+        }
+
+        // if thumbnail is empty, set default image
+        $thumbnail = $this->request->getPost('thumbnail');
+        if (!$thumbnail) {
+            $thumbnail = 'https://www.seekpng.com/png/detail/9-94654_big-image-food-and-drink-icon-png.png';
+        }
+
         $object = [
             'name' => $this->request->getPost('name'),
             'price' => $this->request->getPost('price'),

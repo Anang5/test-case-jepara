@@ -12,7 +12,10 @@
                     <form action="./save" method="post">
                         <div class="mb-3">
                             <label for="category-name" class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="category-name" placeholder="e.g. Makanan">
+                            <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" name="name" id="category-name" placeholder="e.g. Makanan" value="<?= old('name'); ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('name'); ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <!-- save and cancel button -->

@@ -50,5 +50,6 @@ class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
         $this->appName = 'Virgiawan';
         $this->request = \Config\Services::request();
+        session();
     }
 }
