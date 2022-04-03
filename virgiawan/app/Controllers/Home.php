@@ -21,8 +21,8 @@ class Home extends BaseController
             'appName' => $this->appName,
             'title' => 'Home',
             'hero' => 1,
-            'category' => $this->M_category->get_category(),
-            'product' => $this->M_product->get_product()
+            'category' => $this->M_category->paginate('4'),
+            'product' => $this->M_product->get_product()->paginate('3')
         ];
         return view('index', $data);
     }

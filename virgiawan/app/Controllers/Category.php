@@ -21,12 +21,14 @@ class Category extends BaseController
             'appName' => $this->appName,
             'title' => 'Category',
             'hero' => 0,
-            'category' => $this->M_category->get_category()
+            'category' => $this->M_category->paginate('4', 'category'),
+            'pager' => $this->M_category->pager
         ];
         if ($id) {
             $data['title'] = 'Category Detail';
-            $data['category'] = $this->M_category->get_category($id);
-            $data['product'] = $this->M_product->get_product_by_category($id);
+            $data['category'] = $this->M_category->get_category($id)->first();
+            $data['product'] = $this->M_product->get_product_by_category($id)->paginate('3', 'product');
+            $data['pager'] = $this->M_product->get_product_by_category($id)->pager;
             session()->setFlashdata('message', 'data successfully <b>retrieved</b>');
             return view('category/detail', $data);
         } else {

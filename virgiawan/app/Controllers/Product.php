@@ -21,12 +21,13 @@ class Product extends BaseController
             'appName' => $this->appName,
             'title' => 'Product',
             'hero' => 0,
-            'product' => $this->M_product->get_product()
+            'product' => $this->M_product->get_product()->paginate('3', 'product'),
+            'pager' => $this->M_product->get_product()->pager
         ];
 
         if ($id) {
             $data['title'] = 'Product Detail';
-            $data['product'] = $this->M_product->get_product($id);
+            $data['product'] = $this->M_product->get_product($id)->first();
             session()->setFlashdata('message', 'data successfully <b>retrieved</b>');
             return view('product/detail', $data);
         } else {

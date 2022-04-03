@@ -14,14 +14,16 @@ class M_product extends Model
     public function get_product($id = false)
     {
         if ($id) {
-            return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id' => $id])->first();
+            return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id' => $id]);
         } else {
-            return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->findAll();
+            // return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->findAll();
+            return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id');
         }
     }
 
     public function get_product_by_category($id)
     {
-        return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id_category' => $id])->findAll();
+        // return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id_category' => $id])->findAll();
+        return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id_category' => $id]);
     }
 }

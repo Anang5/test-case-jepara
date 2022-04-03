@@ -11,12 +11,8 @@ class M_category extends Model
 
     protected $allowedFields = ['name'];
 
-    public function get_category($id = false)
+    public function get_category($id)
     {
-        if ($id) {
-            return $this->where(['id' => $id])->first();
-        } else {
-            return $this->findAll();
-        }
+        return $this->where(['id' => $id]);
     }
 }

@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <div class="container px-3 py-5 my-5">
     <!-- category -->
-    <section class="row mb-5" id="category">
+    <section class="row mb-3" id="category">
         <div class="col-12 mb-3">
             <h2><?= $title; ?></h2>
         </div>
@@ -27,6 +27,11 @@
                 </a>
             </div>
         <?php } ?>
+
+    </section>
+
+    <section class="row mb-5">
+        <?= $pager->links('category', 'custom_pagination'); ?>
     </section>
 </div>
 <?= $this->endSection(); ?>
