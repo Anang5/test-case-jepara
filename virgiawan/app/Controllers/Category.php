@@ -21,6 +21,7 @@ class Category extends BaseController
             'appName' => $this->appName,
             'title' => 'Category',
             'hero' => 0,
+            'request' => $this->request,
             'category' => $this->M_category->paginate('4', 'category'),
             'pager' => $this->M_category->pager
         ];
@@ -42,6 +43,7 @@ class Category extends BaseController
             'appName' => $this->appName,
             'title' => 'Add Category',
             'hero' => 0,
+            'request' => $this->request,
             'validation' => \Config\Services::validation()
         ];
         return view('category/add', $data);
@@ -70,6 +72,7 @@ class Category extends BaseController
             'appName' => $this->appName,
             'title' => 'Edit Category',
             'hero' => 0,
+            'request' => $this->request,
             'category' => $this->M_category->get_category($id),
             'validation' => \Config\Services::validation()
         ];

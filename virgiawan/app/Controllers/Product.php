@@ -21,6 +21,7 @@ class Product extends BaseController
             'appName' => $this->appName,
             'title' => 'Product',
             'hero' => 0,
+            'request' => $this->request,
             'product' => $this->M_product->get_product()->paginate('3', 'product'),
             'pager' => $this->M_product->get_product()->pager
         ];
@@ -41,6 +42,7 @@ class Product extends BaseController
             'appName' => $this->appName,
             'title' => 'Add Product',
             'hero' => 0,
+            'request' => $this->request,
             'category' => $this->M_category->get_category(),
             'validation' => \Config\Services::validation()
         ];
@@ -81,6 +83,7 @@ class Product extends BaseController
             'appName' => $this->appName,
             'title' => 'Edit Product',
             'hero' => 0,
+            'request' => $this->request,
             'category' => $this->M_category->get_category(),
             'product' => $this->M_product->get_product($id),
             'validation' => \Config\Services::validation()
