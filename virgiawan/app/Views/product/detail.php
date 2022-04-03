@@ -7,6 +7,14 @@
         <div class="col-12 mb-3">
             <h2><?= $title; ?></h2>
         </div>
+        <div class="col-12 mb-3">
+            <?php if (session()->getFlashdata('message')) { ?>
+                <div div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('message'); ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+        </div>
         <div class="col-12 col-lg-6">
             <div class="card mb-3">
                 <div class="row g-0">

@@ -10,6 +10,14 @@
         <div class="col-12 mb-3">
             <a href="/category/add" class="btn btn-primary">Add Category</a>
         </div>
+        <div class="col-12 mb-3">
+            <?php if (session()->getFlashdata('message')) { ?>
+                <div div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('message'); ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+        </div>
         <?php foreach ($category as $c) { ?>
             <div class="col-4 col-lg-2 mb-4 mb-lg-3">
                 <a href="/category/<?= $c->id; ?>" class="card border-0 shadow btn-warning text-center text-decoration-none">

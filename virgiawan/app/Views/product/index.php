@@ -10,6 +10,14 @@
         <div class="col-12 mb-3">
             <a href="/product/add" class="btn btn-primary">Add Product</a>
         </div>
+        <div class="col-12 mb-3">
+            <?php if (session()->getFlashdata('message')) { ?>
+                <div div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('message'); ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+        </div>
         <?php foreach ($product as $p) { ?>
             <div class="col-6 col-lg-4  mb-4 mb-lg-3">
                 <div class="card border-0 shadow-sm text-decoration-none">

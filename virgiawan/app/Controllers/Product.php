@@ -27,6 +27,7 @@ class Product extends BaseController
         if ($id) {
             $data['title'] = 'Product Detail';
             $data['product'] = $this->M_product->get_product($id);
+            session()->setFlashdata('message', 'data successfully <b>retrieved</b>');
             return view('product/detail', $data);
         } else {
             return view('product/index', $data);
@@ -54,6 +55,7 @@ class Product extends BaseController
         ];
         // dd($object);
         $this->M_product->save($object);
+        session()->setFlashdata('message', 'data successfully <b>created</b>');
         return redirect()->to('/product');
     }
 
@@ -78,12 +80,14 @@ class Product extends BaseController
             'thumbnail' => $this->request->getPost('thumbnail'),
         ];
         $this->M_product->update($id, $object);
+        session()->setFlashdata('message', 'data successfully <b>updated</b>');
         return redirect()->to('/product');
     }
 
     public function delete($id)
     {
         $this->M_product->delete($id);
+        session()->setFlashdata('message', 'data successfully <b>deleted</b>');
         return redirect()->to('/product');
     }
 }

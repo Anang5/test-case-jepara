@@ -27,6 +27,7 @@ class Category extends BaseController
             $data['title'] = 'Category Detail';
             $data['category'] = $this->M_category->get_category($id);
             $data['product'] = $this->M_product->get_product_by_category($id);
+            session()->setFlashdata('message', 'data successfully <b>retrieved</b>');
             return view('category/detail', $data);
         } else {
             return view('category/index', $data);
@@ -49,6 +50,7 @@ class Category extends BaseController
             'name' => $this->request->getPost('name')
         ];
         $this->M_category->save($object);
+        session()->setFlashdata('message', 'data successfully <b>created</b>');
         return redirect()->to('/category');
     }
 
@@ -69,12 +71,14 @@ class Category extends BaseController
             'name' => $this->request->getPost('name')
         ];
         $this->M_category->update($id, $object);
+        session()->setFlashdata('message', 'data successfully <b>updated</b>');
         return redirect()->to('/category');
     }
 
     public function delete($id)
     {
         $this->M_category->delete($id);
+        session()->setFlashdata('message', 'data successfully <b>deleted</b>');
         return redirect()->to('/category');
     }
 }
