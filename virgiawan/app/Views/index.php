@@ -16,6 +16,9 @@
                 </a>
             </div>
         <?php } ?>
+        <div class="col-lg-12 text-center">
+            <a href="/category" class="nav-link">Lainnya &rarr;</a>
+        </div>
     </section>
 
     <!-- product -->
@@ -37,32 +40,8 @@
                 </div>
             </div>
         <?php } ?>
-        <!-- <div class="col-6 col-lg-4  mb-4 mb-lg-3">
-            <div class="card border-0 shadow-sm text-decoration-none">
-                <img class="product-thumbnail rounded" src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=428&q=80" alt="Pizza">
-                <div class="card-body">
-                    <a href="./product/3" class="card-title h5 text-decoration-none">Pizza</a>
-                    <h4><span class="fw-bold">120.000</span> IDR</h3>
-                        <div class="d-inline-block">
-                            <a href="./category/2.html" class="btn btn-sm btn-outline-dark border text-decoration-none">Makanan</a>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-lg-4  mb-4 mb-lg-3">
-            <div class="card border-0 shadow-sm text-decoration-none">
-                <img class="product-thumbnail rounded" src="https://images.unsplash.com/photo-1583555929401-a411458578f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Cappucinno">
-                <div class="card-body">
-                    <a href="./product/4.html" class="card-title h5 text-decoration-none">Cappucinno</a>
-                    <h4><span class="fw-bold">10.000</span> IDR</h3>
-                        <div class="d-inline-block">
-                            <a href="./category/2.html" class="btn btn-sm btn-outline-dark border text-decoration-none">Minuman</a>
-                        </div>
-                </div>
-            </div>
-        </div> -->
         <div class="col-lg-12 text-center">
-            <a href="/product" class="nav-link">Lainnya →</a>
+            <a href="/product" class="nav-link">Lainnya &rarr;</a>
         </div>
     </section>
 </div>

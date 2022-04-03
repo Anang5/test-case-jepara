@@ -22,7 +22,7 @@
                             </p>
                             <p class="card-text">
                                 <a href="edit/<?= $product->id; ?>" class="btn btn-warning">Edit</a>
-                                <a href="delete/<?= $product->id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                                <a href="delete/<?= $product->id; ?>" class="btn btn-danger" onclick="return confirm(`Are you sure delete '<?= $product->name; ?>'?`)">Delete</a>
                             </p>
                             <p class="card-text">
                                 <a href="./" class="nav-link px-0">&larr; Kembali</a>

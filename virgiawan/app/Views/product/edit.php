@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <!-- save and cancel button -->
+                            <!-- update and cancel button -->
                             <input type="submit" class="btn btn-primary" id="update-product" value="Update">
                             <a href="../<?= $product->id; ?>" class="btn btn-secondary" id="cancel-product">Cancel</a>
                         </div>

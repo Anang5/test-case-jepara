@@ -2,13 +2,14 @@
 
 <?= $this->section('content'); ?>
 <div class="container px-3 py-5 my-5">
-    <!-- product -->
-    <section class="row mb-5" id="product">
+    <!-- category -->
+    <section class="row mb-5" id="category">
         <div class="col-12 mb-3">
-            <h2><?= $title; ?></h2>
+            <h2>Category: "<?= $category->name; ?>"</h2>
         </div>
         <div class="col-12 mb-3">
-            <a href="/product/add" class="btn btn-primary">Add Product</a>
+            <a href="edit/<?= $category->id; ?>" class="btn btn-warning">Edit</a>
+            <a href="delete/<?= $category->id; ?>" class="btn btn-danger" onclick="return confirm(`Are you sure delete '<?= $category->name; ?>' category?`)">Delete</a>
         </div>
         <?php foreach ($product as $p) { ?>
             <div class="col-6 col-lg-4  mb-4 mb-lg-3">

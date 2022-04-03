@@ -19,4 +19,9 @@ class M_product extends Model
             return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->findAll();
         }
     }
+
+    public function get_product_by_category($id)
+    {
+        return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id_category' => $id])->findAll();
+    }
 }
