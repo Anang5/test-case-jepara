@@ -20,7 +20,7 @@
                         <div class="mb-3">
                             <!-- update and cancel button -->
                             <input type="submit" class="btn btn-primary" id="update-category" value="Update">
-                            <a href="./" class="btn btn-secondary" id="cancel-category">Cancel</a>
+                            <a href="../" class="btn btn-secondary" id="cancel-category">Cancel</a>
                         </div>
                     </form>
                 </div>

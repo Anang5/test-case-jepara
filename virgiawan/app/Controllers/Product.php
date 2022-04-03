@@ -43,7 +43,7 @@ class Product extends BaseController
             'title' => 'Add Product',
             'hero' => 0,
             'request' => $this->request,
-            'category' => $this->M_category->get_category(),
+            'category' => $this->M_category->findAll(),
             'validation' => \Config\Services::validation()
         ];
         return view('product/add', $data);
@@ -84,7 +84,7 @@ class Product extends BaseController
             'title' => 'Edit Product',
             'hero' => 0,
             'request' => $this->request,
-            'category' => $this->M_category->get_category(),
+            'category' => $this->M_category->findAll(),
             'product' => $this->M_product->get_product($id),
             'validation' => \Config\Services::validation()
         ];
