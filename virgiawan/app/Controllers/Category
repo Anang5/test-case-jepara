@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Controllers;
+
+use App\Models\M_category;
+
+class Category extends BaseController
+{
+    protected $M_category;
+    public function __construct()
+    {
+        $this->M_category = new M_category();
+    }
+
+    public function index()
+    {
+        $data = [
+            'appName' => $this->appName,
+            'title' => 'category',
+            'hero' => 0,
+            'category' => $this->M_category->get_category()
+        ];
+        return view('category/index', $data);
+    }
+}
