@@ -85,7 +85,7 @@ class Product extends BaseController
             'hero' => 0,
             'request' => $this->request,
             'category' => $this->M_category->findAll(),
-            'product' => $this->M_product->get_product($id),
+            'product' => $this->M_product->get_product($id)->first(),
             'validation' => \Config\Services::validation()
         ];
         return view('product/edit', $data);

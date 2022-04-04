@@ -2416,3 +2416,63 @@ CRITICAL - 2022-04-03 11:59:35 --> Not unique table/alias: 'category'
 #10 C:\xampp\htdocs\test-case-jepara\virgiawan\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #11 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #12 {main}
+CRITICAL - 2022-04-03 12:01:44 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Views\category\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('category/edit', Array, true)
+#4 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Controllers\Category.php(79): view('category/edit', Array)
+#5 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Category->edit('main.js')
+#6 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test-case-jepara\virgiawan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-03 12:01:44 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Views\category\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('category/edit', Array, true)
+#4 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Controllers\Category.php(79): view('category/edit', Array)
+#5 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Category->edit('main.js')
+#6 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test-case-jepara\virgiawan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-03 19:53:45 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Views\category\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('category/edit', Array, true)
+#4 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Controllers\Category.php(79): view('category/edit', Array)
+#5 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Category->edit('main.js')
+#6 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test-case-jepara\virgiawan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-03 19:53:55 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Views\category\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('category/edit', Array, true)
+#4 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Controllers\Category.php(79): view('category/edit', Array)
+#5 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Category->edit('main.js')
+#6 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test-case-jepara\virgiawan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-03 19:55:01 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Views\product\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('product/edit', Array, true)
+#4 C:\xampp\htdocs\test-case-jepara\virgiawan\app\Controllers\Product.php(91): view('product/edit', Array)
+#5 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Product->edit('main.js')
+#6 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test-case-jepara\virgiawan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\test-case-jepara\virgiawan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
