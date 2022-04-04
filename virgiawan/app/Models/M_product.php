@@ -14,7 +14,8 @@ class M_product extends Model
     public function get_product($id = false)
     {
         if ($id) {
-            return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id' => $id]);
+            // return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->where(['product.id' => $id]);
+            return $this->where(['product.id' => $id]);
         } else {
             // return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id')->findAll();
             return $this->select('product.*, category.name AS c_name')->join('category', 'product.id_category = category.id');

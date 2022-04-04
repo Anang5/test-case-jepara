@@ -73,7 +73,7 @@ class Category extends BaseController
             'title' => 'Edit Category',
             'hero' => 0,
             'request' => $this->request,
-            'category' => $this->M_category->get_category($id),
+            'category' => $this->M_category->get_category($id)->first(),
             'validation' => \Config\Services::validation()
         ];
         return view('category/edit', $data);
