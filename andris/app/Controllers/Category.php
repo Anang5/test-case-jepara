@@ -9,15 +9,14 @@ class Category extends BaseController
 
     protected $categorymodel;
     public function __construct()
-    {      
-        $this->categorymodel = new categoryModel();   
-        
+    {
+        $this->categorymodel = new categoryModel();
     }
 
-   
-   
+
+
     public function index()
-    {   
+    {
         $category = $this->categorymodel->get();
 
         $response = [];
@@ -31,13 +30,15 @@ class Category extends BaseController
             ]);
         }
 
-        echo "<pre>"; print_r($response); die;
+        echo "<pre>";
+        print_r($response);
+        die;
     }
 
     public function create_update($id)
     {
         $category = $this->categorymodel->find($id);
-        
+
         $response[] = [
             'message' => 'data succesfully created / updated',
             'data' => [
@@ -47,13 +48,15 @@ class Category extends BaseController
             ]
         ];
 
-        echo "<pre>"; print_r($response); die;
+        echo "<pre>";
+        print_r($response);
+        die;
     }
 
     public function delete($id)
     {
         $category = $this->categorymodel->find($id);
-        
+
         $response[] = [
             'message' => 'data successfully deleted',
             'data' => [
@@ -61,10 +64,8 @@ class Category extends BaseController
             ]
         ];
 
-        echo "<pre>"; print_r($response); die;
-    
-
+        echo "<pre>";
+        print_r($response);
+        die;
     }
-
-    
 }
