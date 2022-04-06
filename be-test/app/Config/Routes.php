@@ -43,11 +43,11 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes)
     $routes->delete('categories/(:num)', 'Categories::softDelete/$1');
 
     // products
-    $routes->get('/products', 'Products::index');
-    $routes->get('/products/(:num)', 'Products::show/$1');
-    $routes->post('/products', 'Products::store');
-    $routes->post('/products/(:num)/update', 'Products::update/$1');
-    $routes->delete('/products/(:num)', 'Products::softDelete/$1');
+    $routes->get('products', 'Products::index');
+    $routes->get('products/(:num)', 'Products::show/$1');
+    $routes->post('products', 'Products::store');
+    $routes->post('products/(:num)/update', 'Products::update/$1');
+    $routes->delete('products/(:num)', 'Products::softDelete/$1');
 });
 
 /*
