@@ -34,20 +34,20 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 // create group for api
-$routes->group('api', function ($routes) {
+$routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes) {
     // categories
-    $routes->get('/categories', 'Api\Categories::index');
-    $routes->get('/categories/{id}', 'Api\Categories::show');
-    $routes->post('/categories', 'Api\Categories::store');
-    $routes->put('/categories/{id}', 'Api\Categories::update');
-    $routes->delete('/categories/{id}', 'Api\Categories::softDelete');
+    $routes->get('categories', 'Categories::index');
+    $routes->get('categories/(:num)', 'Categories::show/$1');
+    $routes->post('categories', 'Categories::store');
+    $routes->put('categories/(:num)', 'Categories::update/$1');
+    $routes->delete('categories/(:num)', 'Categories::softDelete/$1');
 
     // products
-    $routes->get('/products', 'Api\Products::index');
-    $routes->get('/products/{id}', 'Api\Products::show');
-    $routes->post('/products', 'Api\Products::store');
-    $routes->put('/products/{id}', 'Api\Products::update');
-    $routes->delete('/products/{id}', 'Api\Products::softDelete');
+    $routes->get('/products', 'Products::index');
+    $routes->get('/products/(:num)', 'Products::show/$1');
+    $routes->post('/products', 'Products::store');
+    $routes->put('/products/(:num)', 'Products::update/$1');
+    $routes->delete('/products/(:num)', 'Products::softDelete/$1');
 });
 
 /*
