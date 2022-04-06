@@ -33,6 +33,23 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// create group for api
+$routes->group('api', function ($routes) {
+    // categories
+    $routes->get('/categories', 'Api\Categories::index');
+    $routes->get('/categories/{id}', 'Api\Categories::show');
+    $routes->post('/categories', 'Api\Categories::store');
+    $routes->put('/categories/{id}', 'Api\Categories::update');
+    $routes->delete('/categories/{id}', 'Api\Categories::softDelete');
+
+    // products
+    $routes->get('/products', 'Api\Products::index');
+    $routes->get('/products/{id}', 'Api\Products::show');
+    $routes->post('/products', 'Api\Products::store');
+    $routes->put('/products/{id}', 'Api\Products::update');
+    $routes->delete('/products/{id}', 'Api\Products::softDelete');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
